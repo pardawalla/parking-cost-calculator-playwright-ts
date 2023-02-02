@@ -18,6 +18,8 @@ async function fillLeavingDate(page, leavingDate) {
   console.log("Leaving date is", msg);
   await expect(elLeavingDate).toHaveValue("02/04/2023");
 }
+
+// Tests
 test.beforeEach(async ({ page }) => {
   await page.goto("https://www.shino.de/parkcalc/");
 });
@@ -25,7 +27,7 @@ test.beforeEach(async ({ page }) => {
 test.describe("estimated parking costs", () => {
   test("valet parking", async ({ page }) => {
     // create a new todo locator
-    await page.locator('#ParkingLot').selectOption('Valet');
+    await page.locator("#ParkingLot").selectOption("Valet");
     const entryDate = "02/04/2023";
     const leavingDate = entryDate;
 
@@ -38,11 +40,11 @@ test.describe("estimated parking costs", () => {
       .locator('(//span[@class="SubHead"])[1]')
       .innerText();
     console.log("estimated cost is:", estCost);
-     expect(estCost).toEqual("$ 12.00");
+    expect(estCost).toEqual("$ 12.00");
   });
 
   test("short-term parking", async ({ page }) => {
-    await page.locator('#ParkingLot').selectOption('Short');
+    await page.locator("#ParkingLot").selectOption("Short");
     const entryDate = "02/04/2023";
     const leavingDate = entryDate;
 
@@ -59,7 +61,7 @@ test.describe("estimated parking costs", () => {
   });
 
   test("economy parking", async ({ page }) => {
-    await page.locator('#ParkingLot').selectOption('Economy');
+    await page.locator("#ParkingLot").selectOption("Economy");
     const entryDate = "02/04/2023";
     const leavingDate = entryDate;
 
@@ -73,8 +75,5 @@ test.describe("estimated parking costs", () => {
       .innerText();
     console.log("estimated cost is:", estCost);
     expect(estCost).toEqual("$ 0.00");
-
   });
-
-
 });
