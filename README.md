@@ -1,6 +1,6 @@
 # parking-cost-calculator-playwright-ts
 
-Sample automated tests for the [Parking Cost Calculator](https://www.shino.de/parkcalc/)
+Sample automated tests for the [Parking Cost Calculator](https://www.shino.de/parkcalc/), using the Playwright and Typescript. 
 
 ## Dev Env
 - Editor: VScode
