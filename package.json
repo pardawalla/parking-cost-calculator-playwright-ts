@@ -1,0 +1,21 @@
+{
+  "name": "parking-cost-calculator-playwright-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pardawalla/parking-cost-calculator-playwright-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pardawalla/parking-cost-calculator-playwright-ts/issues"
+  },
+  "homepage": "https://github.com/pardawalla/parking-cost-calculator-playwright-ts#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.30.0"
+  }
+}
